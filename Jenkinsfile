@@ -40,7 +40,7 @@ pipeline {
                 sh '''
                     echo "deploying the application ........"
                     docker rm -f dobby-app || true
-                    docker run -d -p 8080:8080 --name dobby-app "${DOCKER_IMAGE_NAME}":latest
+                    docker run -d -p 8081:8080 --name dobby-app "${DOCKER_IMAGE_NAME}":latest
                 '''
             }
         }
