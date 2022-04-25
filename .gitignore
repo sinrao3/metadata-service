@@ -1,5 +1,4 @@
-target/
-Dockerfile
+target/git
 
 ### Application ###
 *.log
