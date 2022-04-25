@@ -39,8 +39,8 @@ pipeline {
             steps {
                 sh '''
                     echo "deploying the application ........"
-                    docker rm -f dobby-app || true
-                    docker run -d -p 4444:4444 --name dobby-app "${DOCKER_IMAGE_NAME}":latest
+                    docker rm -f metadata-app || true
+                    docker run -d -p 8080:8080 --name metadata-app "${DOCKER_IMAGE_NAME}":latest
                 '''
             }
         }
